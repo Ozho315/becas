@@ -2,8 +2,9 @@
 
 namespace Database\Factories;
 
+use App\Models\Committee;
 use Illuminate\Database\Eloquent\Factories\Factory;
-
+use Faker\Generator as Faker;
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Professor>
  */
@@ -16,10 +17,12 @@ class ProfessorFactory extends Factory
      */
     public function definition(): array
     {
+        $committeeId = Committee::inRandomOrder()->first()->id;
         return [
-            'name' => fake()->name,
-            'last_name' => fake()->lastName,
-            'identification_number' => fake()->numerify('##########'),
+            'name' => $this->faker->name,
+            'last_name' => $this->faker->lastName,
+            'identification_number' => $this->faker->numerify('##########'),
+            'committee_id' => $committeeId,
         ];
     }
 }

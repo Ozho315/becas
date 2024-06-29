@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use Rappasoft\LaravelLivewireTables\DataTableComponent;
 use Rappasoft\LaravelLivewireTables\Views\Column;
 use App\Models\ScholarshipApplication;
+use Rappasoft\LaravelLivewireTables\Views\Columns\BooleanColumn;
 
 class ScholarshipApplicationTable extends DataTableComponent
 {
@@ -37,6 +38,7 @@ class ScholarshipApplicationTable extends DataTableComponent
             Column::make("Id", "id")
                 ->sortable(),
             Column::make('Comisión', 'committee.name'),
+            Column::make('Aprobada', 'is_approved')->view('components.livewire.datatables.bool-nullable'),
             Column::make("Created at", "created_at")
                 ->sortable(),
             Column::make("Updated at", "updated_at")
@@ -58,5 +60,12 @@ class ScholarshipApplicationTable extends DataTableComponent
     {
         \Log::debug('El profesor ' . Auth::user()->userable->name . ' está ' . ($isApproved ? 'autorizando' : 'negando') . ' la solicitud');
 
+        $application = ScholarshipApplication::find($applicationId);
+
+        $application->update([
+            'is_approved' => $isApproved,
+        ]);
+
+        $application->student->user->email;
     }
 }

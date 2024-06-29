@@ -17,6 +17,7 @@ class ScholarshipApplication extends Model
      */
     protected $fillable = [
         'documents',
+        'is_approved',
         'scholarship_type_id',
         'student_id',
         'committee_id',

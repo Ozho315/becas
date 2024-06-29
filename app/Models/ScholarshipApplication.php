@@ -32,4 +32,14 @@ class ScholarshipApplication extends Model
     {
         return $this->belongsTo(Committee::class);
     }
+
+    /**
+     * Get the student that owns the ScholarshipApplication
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function student(): BelongsTo
+    {
+        return $this->belongsTo(Student::class);
+    }
 }

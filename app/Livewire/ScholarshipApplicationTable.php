@@ -2,8 +2,10 @@
 
 namespace App\Livewire;
 
+use App\Mail\ApplicationReplied;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 use Rappasoft\LaravelLivewireTables\DataTableComponent;
 use Rappasoft\LaravelLivewireTables\Views\Column;
 use App\Models\ScholarshipApplication;
@@ -66,6 +68,8 @@ class ScholarshipApplicationTable extends DataTableComponent
             'is_approved' => $isApproved,
         ]);
 
-        $application->student->user->email;
+
+        Mail::to($application->student->user->email)->send(new ApplicationReplied($application));
+
     }
 }

@@ -28,7 +28,7 @@ class StudentRegistered extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Student Registered',
+            subject: 'Estudiante registrado',
         );
     }
 

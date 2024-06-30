@@ -12,6 +12,6 @@ Contraseña: {{$student->identification_number}}
 Ir al sistema de becas
 </x-mail::button>
 
-Graciias,<br>
+Gracias,<br>
 {{ config('app.name') }}
 </x-mail::message>

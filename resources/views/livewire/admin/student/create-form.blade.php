@@ -12,7 +12,7 @@
 
                 {{-- identification --}}
                 <x-mary-input class="col-span-1" label="{{ __('Identification') }}" wire:model="identification"
-                    icon="o-user" hint="Número de identificación del estudiante" />
+                    icon="o-identification" hint="Número de identificación del estudiante" />
 
                 {{-- mail --}}
                 <x-mary-input class="col-span-1" label="{{ __('Email') }}" wire:model="email" icon="o-user" />

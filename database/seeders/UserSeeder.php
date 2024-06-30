@@ -42,13 +42,15 @@ class UserSeeder extends Seeder
          * Students users
          * TODO - Alonso: Implementar la lógica de usuarios de profesores para los estudiantes también
          */
-        $studentUser = User::create([
-            'name' => 'Estudiante',
-            'email' => 'student@utn.edu.ec',
-            'password' => 'utn-password',
-        ]);
-        $studentUser->assignRole('student');
-        $studentObj = Student::find(1);
-        $studentObj->user()->save($studentUser);
+        $students = Student::all();
+
+        foreach ($students as $student) {
+            $user = new User();
+            $user->name = $student->name;
+            $user->email = "student{$student->id}@utn.edu.ec";
+            $user->password ='utn-password';
+            $user->save();
+            $student->user()->save($user);
+        }
     }
 }

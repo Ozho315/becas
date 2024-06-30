@@ -30,7 +30,7 @@ class UserSeeder extends Seeder
         foreach ($professors as $index => $professor) {
             $profNumber = $index + 1;
             $userObj = User::create([
-                'name' => "Professor #{$profNumber}",
+                'name' => $professor->name,
                 'email' => "professor_{$profNumber}@utn.edu.ec",
                 'password' => 'utn-password',
             ]);
@@ -48,7 +48,7 @@ class UserSeeder extends Seeder
             $user = new User();
             $user->name = $student->name;
             $user->email = "student{$student->id}@utn.edu.ec";
-            $user->password ='utn-password';
+            $user->password = 'utn-password';
             $user->save();
             $student->user()->save($user);
         }

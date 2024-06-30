@@ -35,7 +35,7 @@
 
                 {{-- profile_picture_path --}}
                 <x-mary-file class="col-span-1" wire:model='profilePicture' label="{{ __('Profile picture') }}"
-                    hint="Only JPG" accept="image/jpg" />
+                    hint="Only JPG" accept=".jpg" />
             </div>
         </div>
 

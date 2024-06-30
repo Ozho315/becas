@@ -31,30 +31,22 @@ Route::middleware('auth')->group(function () {
         Route::resource('users', UserController::class);
         Route::resource('professors', ProfessorController::class);
         Route::resource('students', StudentController::class)->only(['create', 'store', 'edit', 'update', 'destroy']);
+        Route::resource('majors', MajorController::class);
     });
 
     // Routes for Professor and Student
     Route::middleware('role:professor|student')->group(function () {
         Route::resource('scholarship-applications', ScholarshipApplicationController::class);
     });
-// Admin and Professor routes
-Route::resource('students', StudentController::class);
 
-// Routes for Admin
-Route::prefix('admin')->middleware('role:admin')->group(function () {
-    Route::resource('users', UserController::class);
-    Route::resource('professors', ProfessorController::class);
-    Route::resource('majors', MajorController::class);
-});
+    // Routes for Professor
+    Route::prefix('professor')->middleware('role:professor')->group(function () {
+    });
 
-// Routes for Professor
-Route::prefix('professor')->middleware('role:professor')->group(function () {
-});
-
-// Routes for Student
-Route::prefix('student')->middleware('role:student')->group(function () {
-    //
-});
+    // Routes for Student
+    Route::prefix('student')->middleware('role:student')->group(function () {
+        //
+    });
 });
 
 require __DIR__ . '/auth.php';

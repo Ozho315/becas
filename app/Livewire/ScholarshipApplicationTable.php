@@ -45,12 +45,12 @@ class ScholarshipApplicationTable extends DataTableComponent
                 ->sortable(),
             Column::make("Updated at", "updated_at")
                 ->sortable(),
-            Column::make('Administrar')->hideIf(Auth::user()->hasRole('student'))->label(
+            Column::make('Administrar')->hideIf(!Auth::user()->hasRole('professor'))->label(
                 fn($row, Column $column) => view('components.livewire.datatables.applications.professor-actions')->with([
                     'row' => $row,
                 ])
             ),
-            Column::make('Acciones')->hideIf(Auth::user()->hasRole('professor'))->label(
+            Column::make('Acciones')->hideIf(!Auth::user()->hasRole('student'))->label(
                 fn($row, Column $column) => view('components.livewire.datatables.applications.student-actions')->with([
                     'row' => $row,
                 ])

@@ -18,6 +18,8 @@ class ScholarshipApplicationController extends Controller
             return view('professor.scholarship-applications.index');
         } else if (Auth::user()->hasRole('student')) {
             return view('student.scholarship-applications.index');
+        } else if (Auth::user()->hasRole('admin')) {
+            return view('admin.scholarship-applications.index');
         }
         abort(403);
     }

@@ -40,7 +40,6 @@ class UserSeeder extends Seeder
 
         /**
          * Students users
-         * TODO - Alonso: Implementar la lógica de usuarios de profesores para los estudiantes también
          */
         $students = Student::all();
 

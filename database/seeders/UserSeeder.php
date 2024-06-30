@@ -49,6 +49,7 @@ class UserSeeder extends Seeder
             $user->email = "student{$student->id}@utn.edu.ec";
             $user->password = 'utn-password';
             $user->save();
+            $user->assignRole('student');
             $student->user()->save($user);
         }
     }

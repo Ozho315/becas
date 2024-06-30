@@ -35,9 +35,8 @@ Route::middleware('auth')->group(function () {
     });
 
     // Routes for Professor and Student
-    Route::middleware('role:professor|student')->group(function () {
-        Route::resource('scholarship-applications', ScholarshipApplicationController::class);
-    });
+    Route::resource('scholarship-applications', ScholarshipApplicationController::class);
+
 
     // Routes for Professor
     Route::prefix('professor')->middleware('role:professor')->group(function () {

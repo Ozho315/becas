@@ -39,6 +39,7 @@ class ScholarshipApplicationTable extends DataTableComponent
         return [
             Column::make("Id", "id")
                 ->sortable(),
+            Column::make('Estudiante', 'student.name'),
             Column::make('Comisión', 'committee.name'),
             Column::make('Aprobada', 'is_approved')->view('components.livewire.datatables.bool-nullable'),
             Column::make("Created at", "created_at")
@@ -55,8 +56,16 @@ class ScholarshipApplicationTable extends DataTableComponent
                     'row' => $row,
                 ])
             ),
+            //Column::make('Documentos', 'documents')->label(fn($row, Column $column)=> view('components.livewire.datatables.applications.professor-stream')),
         ];
     }
+
+    public function downloadPdf(int $id){
+        $application = ScholarshipApplication::find($id);
+        $pdf = \PDF::loadView('storage.app.applications', ['application' => $application]);
+        return $pdf->download('solicitud.pdf');
+    }
+
 
     public function updateStatus(bool $isApproved, int $applicationId)
     {

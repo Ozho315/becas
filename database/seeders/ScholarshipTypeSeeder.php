@@ -13,9 +13,10 @@ class ScholarshipTypeSeeder extends Seeder
      */
     public function run(): void
     {
-        ScholarshipType::create(['name' => 'Beca tipo A', 'committee_id' => 1]);
-        ScholarshipType::create(['name' => 'Beca tipo B', 'committee_id' => 2]);
-        ScholarshipType::create(['name' => 'Beca tipo C', 'committee_id' => 3]);
-        ScholarshipType::create(['name' => 'Beca tipo D', 'committee_id' => 1]);
+        ScholarshipType::create(['name' => 'Beca-Rendimiento Academico', 'committee_id' => 1]);
+        ScholarshipType::create(['name' => 'Beca-Discapacidad', 'committee_id' => 2]);
+        ScholarshipType::create(['name' => 'Beca-Condición Económica', 'committee_id' => 3]);
+        ScholarshipType::create(['name' => 'Beca-Condicion de Etnia', 'committee_id' => 4]);
+        ScholarshipType::create(['name' => 'Beca-Clubes', 'committee_id' => 6]);
     }
 }

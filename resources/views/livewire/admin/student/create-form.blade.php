@@ -3,11 +3,11 @@
         <div class="mt-2 bg-white shadow-sm dark:bg-gray-800 sm:rounded-lg">
             <div class="grid grid-cols-3 gap-4 p-6 text-gray-900 dark:text-gray-100">
                 {{-- name --}}
-                <x-mary-input class="col-span-1" label="{{ __('Name') }}" wire:model="name" icon="o-user"
+                <x-mary-input class="col-span-1" label="{{ __('Names') }}" wire:model="name" icon="o-user"
                     hint="Solo los dos nombres" />
 
                 {{-- last_name --}}
-                <x-mary-input class="col-span-1" label="{{ __('Last name') }}" wire:model="lastName" icon="o-user"
+                <x-mary-input class="col-span-1" label="{{ __('Last names') }}" wire:model="lastName" icon="o-user"
                     hint="Solo los dos apellidos" />
 
                 {{-- identification --}}
@@ -15,15 +15,15 @@
                     icon="o-identification" hint="Número de identificación del estudiante" />
 
                 {{-- mail --}}
-                <x-mary-input class="col-span-1" label="{{ __('Email') }}" wire:model="email" icon="o-user" />
+                <x-mary-input class="col-span-1" label="{{ __('Email') }}" wire:model="email" icon="o-envelope" />
 
                 {{-- phone_number --}}
                 <x-mary-input class="col-span-1" label="{{ __('Phone number') }}" wire:model="phoneNumber"
-                    icon="o-user" hint="Teléfono celular" />
+                    icon="o-phone" hint="Teléfono celular" />
 
                 {{-- address --}}
                 <div class="col-span-2">
-                    <x-mary-input class="w-full" label="{{ __('Address') }}" wire:model="address" icon="o-user"
+                    <x-mary-input class="w-full" label="{{ __('Address') }}" wire:model="address" icon="s-map-pin"
                         hint="Dirección completa" />
                 </div>
 
@@ -35,28 +35,28 @@
 
                 {{-- profile_picture_path --}}
                 <x-mary-file class="col-span-1" wire:model='profilePicture' label="{{ __('Profile picture') }}"
-                    hint="Only JPG" accept=".jpg" />
+                    hint="Solo formato JPG" accept=".jpg" />
             </div>
         </div>
 
         <div class="mt-2 bg-white shadow-sm dark:bg-gray-800 sm:rounded-lg">
             <div class="grid grid-cols-3 gap-4 p-6 text-gray-900 dark:text-gray-100">
                 {{-- major_id --}}
-                <x-mary-select class="col-span-1" label="Master user" icon="o-user" :options="$majors"
+                <x-mary-select class="col-span-1" label="Master user" icon="s-building-office-2" :options="$majors"
                     wire:model="majorId" />
 
                 {{-- semester --}}
-                <x-mary-input class="col-span-1" label="{{ __('Semester') }}" wire:model="semester" icon="o-eye"
+                <x-mary-input class="col-span-1" label="{{ __('Semester') }}" wire:model="semester" icon="o-bookmark-square"
                     type="number" min="2" max="8"/>
 
 
                 {{-- average_rating --}}
                 <x-mary-input class="col-span-1" label="{{ __('Average rating') }}" wire:model="averageRating"
-                    icon="o-eye" type="number" min="8" step="0.01" />
+                    icon="s-pencil-square" type="number" min="8.5" step="0.01" />
 
                 {{-- average_incomes --}}
                 <x-mary-input class="col-span-1" label="{{ __('Average incomes') }}" wire:model="averageIncomes"
-                    icon="o-eye" type="number" min="8.5" step="0.01" />
+                    icon="o-currency-dollar" type="number" min="0" step="0.01" />
             </div>
         </div>
 

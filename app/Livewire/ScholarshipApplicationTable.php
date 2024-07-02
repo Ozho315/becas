@@ -40,6 +40,7 @@ class ScholarshipApplicationTable extends DataTableComponent
         return [
             Column::make("Id", "id")
                 ->sortable(),
+            Column::make('Estudiante', 'student.name'),
             Column::make('Comisión', 'committee.name'),
             Column::make('Estado', 'is_approved')->view('components.livewire.datatables.bool-nullable'),
             Column::make("Creado el", "created_at")

@@ -6,6 +6,7 @@ use App\Mail\ApplicationReplied;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Storage;
 use Rappasoft\LaravelLivewireTables\DataTableComponent;
 use Rappasoft\LaravelLivewireTables\Views\Column;
 use App\Models\ScholarshipApplication;
@@ -70,6 +71,12 @@ class ScholarshipApplicationTable extends DataTableComponent
 
 
         Mail::to($application->student->user->email)->send(new ApplicationReplied($application));
+    }
 
+    public function downloadPdf(int $id)
+    {
+        $application = ScholarshipApplication::find($id);
+        $docs = json_decode($application->documents);
+        return Storage::download($docs[0]);
     }
 }

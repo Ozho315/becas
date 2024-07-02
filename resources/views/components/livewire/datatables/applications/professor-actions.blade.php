@@ -5,6 +5,6 @@
         <button wire:click='updateStatus(0, {{ $row->id }})'><x-heroicon-s-document-minus
                 class="text-red-600 size-6" /></button>
     @endif
-    <button wire:click='downloadPdf({{ $row->id }})'><x-heroicon-o-arrow-down-tray
+    <button wire:click='downloadPdf({{ $row->id }})'><x-heroicon-o-document-arrow-down
             class="text-blue-600 size-6" /></button>
 </div>

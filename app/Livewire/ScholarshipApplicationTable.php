@@ -41,10 +41,10 @@ class ScholarshipApplicationTable extends DataTableComponent
             Column::make("Id", "id")
                 ->sortable(),
             Column::make('Comisión', 'committee.name'),
-            Column::make('Aprobada', 'is_approved')->view('components.livewire.datatables.bool-nullable'),
-            Column::make("Created at", "created_at")
+            Column::make('Estado', 'is_approved')->view('components.livewire.datatables.bool-nullable'),
+            Column::make("Creado el", "created_at")
                 ->sortable(),
-            Column::make("Updated at", "updated_at")
+            Column::make("Editado el", "updated_at")
                 ->sortable(),
             Column::make('Administrar')->hideIf(!Auth::user()->hasRole('professor'))->label(
                 fn($row, Column $column) => view('components.livewire.datatables.applications.professor-actions')->with([

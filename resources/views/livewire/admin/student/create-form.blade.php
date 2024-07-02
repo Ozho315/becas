@@ -47,7 +47,7 @@
 
                 {{-- semester --}}
                 <x-mary-input class="col-span-1" label="{{ __('Semester') }}" wire:model="semester" icon="o-eye"
-                    type="number" min="0" />
+                    type="number" min="2" max="8"/>
 
 
                 {{-- average_rating --}}
@@ -56,7 +56,7 @@
 
                 {{-- average_incomes --}}
                 <x-mary-input class="col-span-1" label="{{ __('Average incomes') }}" wire:model="averageIncomes"
-                    icon="o-eye" type="number" min="8" step="0.01" />
+                    icon="o-eye" type="number" min="8.5" step="0.01" />
             </div>
         </div>
 

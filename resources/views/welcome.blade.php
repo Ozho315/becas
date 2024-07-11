@@ -11,872 +11,13 @@
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
 
-    <!-- Styles -->
-    <style>
-        /*
-! tailwindcss v3.4.4 | MIT License | https://tailwindcss.com
-*/
-        /*
-1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
-2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
-*/
-        *,
-        ::before,
-        ::after {
-            box-sizing: border-box;
-            /* 1 */
-            border-width: 0;
-            /* 2 */
-            border-style: solid;
-            /* 2 */
-            border-color: #e5e7eb;
-            /* 2 */
-        }
-
-        ::before,
-        ::after {
-            --tw-content: '';
-        }
-
-        /*
-1. Use a consistent sensible line-height in all browsers.
-2. Prevent adjustments of font size after orientation changes in iOS.
-3. Use a more readable tab size.
-4. Use the user's configured `sans` font-family by default.
-5. Use the user's configured `sans` font-feature-settings by default.
-6. Use the user's configured `sans` font-variation-settings by default.
-7. Disable tap highlights on iOS
-*/
-        html,
-        :host {
-            line-height: 1.5;
-            /* 1 */
-            -webkit-text-size-adjust: 100%;
-            /* 2 */
-            -moz-tab-size: 4;
-            /* 3 */
-            tab-size: 4;
-            /* 3 */
-            font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-            /* 4 */
-            font-feature-settings: normal;
-            /* 5 */
-            font-variation-settings: normal;
-            /* 6 */
-            -webkit-tap-highlight-color: transparent;
-            /* 7 */
-        }
-
-        /*
-1. Remove the margin in all browsers.
-2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
-*/
-        body {
-            margin: 0;
-            /* 1 */
-            line-height: inherit;
-            /* 2 */
-        }
-
-        /*
-1. Add the correct height in Firefox.
-2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
-3. Ensure horizontal rules are visible by default.
-*/
-        hr {
-            height: 0;
-            /* 1 */
-            color: inherit;
-            /* 2 */
-            border-top-width: 1px;
-            /* 3 */
-        }
-
-        /*
-Add the correct text decoration in Chrome, Edge, and Safari.
-*/
-        abbr:where([title]) {
-            text-decoration: underline dotted;
-        }
-
-        /*
-Remove the default font size and weight for headings.
-*/
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            font-size: inherit;
-            font-weight: inherit;
-        }
-
-        /*
-Reset links to optimize for opt-in styling instead of opt-out.
-*/
-        a {
-            color: inherit;
-            text-decoration: inherit;
-        }
-
-        /*
-Add the correct font weight in Edge and Safari.
-*/
-        b,
-        strong {
-            font-weight: bolder;
-        }
-
-        /*
-1. Use the user's configured `mono` font-family by default.
-2. Use the user's configured `mono` font-feature-settings by default.
-3. Use the user's configured `mono` font-variation-settings by default.
-4. Correct the odd `em` font sizing in all browsers.
-*/
-        code,
-        kbd,
-        samp,
-        pre {
-            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-            /* 1 */
-            font-feature-settings: normal;
-            /* 2 */
-            font-variation-settings: normal;
-            /* 3 */
-            font-size: 1em;
-            /* 4 */
-        }
-
-        /*
-Add the correct font size in all browsers.
-*/
-        small {
-            font-size: 80%;
-        }
-
-        /*
-Prevent `sub` and `sup` elements from affecting the line height in all browsers.
-*/
-        sub,
-        sup {
-            font-size: 75%;
-            line-height: 0;
-            position: relative;
-            vertical-align: baseline;
-        }
-
-        sub {
-            bottom: -0.25em;
-        }
-
-        sup {
-            top: -0.5em;
-        }
-
-        /*
-1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
-2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
-3. Remove gaps between table borders by default.
-*/
-        table {
-            text-indent: 0;
-            /* 1 */
-            border-color: inherit;
-            /* 2 */
-            border-collapse: collapse;
-            /* 3 */
-        }
-
-        /*
-1. Change the font styles in all browsers.
-2. Remove the margin in Firefox and Safari.
-3. Remove default padding in all browsers.
-*/
-        button,
-        input,
-        optgroup,
-        select,
-        textarea {
-            font-family: inherit;
-            /* 1 */
-            font-feature-settings: inherit;
-            /* 1 */
-            font-variation-settings: inherit;
-            /* 1 */
-            font-size: 100%;
-            /* 1 */
-            font-weight: inherit;
-            /* 1 */
-            line-height: inherit;
-            /* 1 */
-            letter-spacing: inherit;
-            /* 1 */
-            color: inherit;
-            /* 1 */
-            margin: 0;
-            /* 2 */
-            padding: 0;
-            /* 3 */
-        }
-
-        /*
-Remove the inheritance of text transform in Edge and Firefox.
-*/
-        button,
-        select {
-            text-transform: none;
-        }
-
-        /*
-1. Correct the inability to style clickable types in iOS and Safari.
-2. Remove default button styles.
-*/
-        button,
-        input:where([type='button']),
-        input:where([type='reset']),
-        input:where([type='submit']) {
-            -webkit-appearance: button;
-            /* 1 */
-            background-color: transparent;
-            /* 2 */
-            background-image: none;
-            /* 2 */
-        }
-
-        /*
-Use the modern Firefox focus style for all focusable elements.
-*/
-        :-moz-focusring {
-            outline: auto;
-        }
-
-        /*
-Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
-*/
-        :-moz-ui-invalid {
-            box-shadow: none;
-        }
-
-        /*
-Add the correct vertical alignment in Chrome and Firefox.
-*/
-        progress {
-            vertical-align: baseline;
-        }
-
-        /*
-Correct the cursor style of increment and decrement buttons in Safari.
-*/
-        ::-webkit-inner-spin-button,
-        ::-webkit-outer-spin-button {
-            height: auto;
-        }
-
-        /*
-1. Correct the odd appearance in Chrome and Safari.
-2. Correct the outline style in Safari.
-*/
-        [type='search'] {
-            -webkit-appearance: textfield;
-            /* 1 */
-            outline-offset: -2px;
-            /* 2 */
-        }
-
-        /*
-Remove the inner padding in Chrome and Safari on macOS.
-*/
-        ::-webkit-search-decoration {
-            -webkit-appearance: none;
-        }
-
-        /*
-1. Correct the inability to style clickable types in iOS and Safari.
-2. Change font properties to `inherit` in Safari.
-*/
-        ::-webkit-file-upload-button {
-            -webkit-appearance: button;
-            /* 1 */
-            font: inherit;
-            /* 2 */
-        }
-
-        /*
-Add the correct display in Chrome and Safari.
-*/
-        summary {
-            display: list-item;
-        }
-
-        /*
-Removes the default spacing and border for appropriate elements.
-*/
-        blockquote,
-        dl,
-        dd,
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6,
-        hr,
-        figure,
-        p,
-        pre {
-            margin: 0;
-        }
-
-        fieldset {
-            margin: 0;
-            padding: 0;
-        }
-
-        legend {
-            padding: 0;
-        }
-
-        ol,
-        ul,
-        menu {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        /*
-Reset default styling for dialogs.
-*/
-        dialog {
-            padding: 0;
-        }
-
-        /*
-Prevent resizing textareas horizontally by default.
-*/
-        textarea {
-            resize: vertical;
-        }
-
-        /*
-1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
-2. Set the default placeholder color to the user's configured gray 400 color.
-*/
-        input::placeholder,
-        textarea::placeholder {
-            opacity: 1;
-            /* 1 */
-            color: #9ca3af;
-            /* 2 */
-        }
-
-        /*
-Set the default cursor for buttons.
-*/
-        button,
-        [role="button"] {
-            cursor: pointer;
-        }
-
-        /*
-Make sure disabled buttons don't get the pointer cursor.
-*/
-        :disabled {
-            cursor: default;
-        }
-
-        /*
-1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
-2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
-   This can trigger a poorly considered lint error in some tools but is included by design.
-*/
-        img,
-        svg,
-        video,
-        canvas,
-        audio,
-        iframe,
-        embed,
-        object {
-            display: block;
-            /* 1 */
-            vertical-align: middle;
-            /* 2 */
-        }
-
-        /*
-Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
-*/
-        img,
-        video {
-            max-width: 100%;
-            height: auto;
-        }
-
-        /* Make elements with the HTML hidden attribute stay hidden by default */
-        [hidden] {
-            display: none;
-        }
-
-        *,
-        ::before,
-        ::after {
-            --tw-border-spacing-x: 0;
-            --tw-border-spacing-y: 0;
-            --tw-translate-x: 0;
-            --tw-translate-y: 0;
-            --tw-rotate: 0;
-            --tw-skew-x: 0;
-            --tw-skew-y: 0;
-            --tw-scale-x: 1;
-            --tw-scale-y: 1;
-            --tw-pan-x: ;
-            --tw-pan-y: ;
-            --tw-pinch-zoom: ;
-            --tw-scroll-snap-strictness: proximity;
-            --tw-gradient-from-position: ;
-            --tw-gradient-via-position: ;
-            --tw-gradient-to-position: ;
-            --tw-ordinal: ;
-            --tw-slashed-zero: ;
-            --tw-numeric-figure: ;
-            --tw-numeric-spacing: ;
-            --tw-numeric-fraction: ;
-            --tw-ring-inset: ;
-            --tw-ring-offset-width: 0px;
-            --tw-ring-offset-color: #fff;
-            --tw-ring-color: rgb(59 130 246 / 0.5);
-            --tw-ring-offset-shadow: 0 0 #0000;
-            --tw-ring-shadow: 0 0 #0000;
-            --tw-shadow: 0 0 #0000;
-            --tw-shadow-colored: 0 0 #0000;
-            --tw-blur: ;
-            --tw-brightness: ;
-            --tw-contrast: ;
-            --tw-grayscale: ;
-            --tw-hue-rotate: ;
-            --tw-invert: ;
-            --tw-saturate: ;
-            --tw-sepia: ;
-            --tw-drop-shadow: ;
-            --tw-backdrop-blur: ;
-            --tw-backdrop-brightness: ;
-            --tw-backdrop-contrast: ;
-            --tw-backdrop-grayscale: ;
-            --tw-backdrop-hue-rotate: ;
-            --tw-backdrop-invert: ;
-            --tw-backdrop-opacity: ;
-            --tw-backdrop-saturate: ;
-            --tw-backdrop-sepia: ;
-            --tw-contain-size: ;
-            --tw-contain-layout: ;
-            --tw-contain-paint: ;
-            --tw-contain-style: ;
-        }
-
-        ::backdrop {
-            --tw-border-spacing-x: 0;
-            --tw-border-spacing-y: 0;
-            --tw-translate-x: 0;
-            --tw-translate-y: 0;
-            --tw-rotate: 0;
-            --tw-skew-x: 0;
-            --tw-skew-y: 0;
-            --tw-scale-x: 1;
-            --tw-scale-y: 1;
-            --tw-pan-x: ;
-            --tw-pan-y: ;
-            --tw-pinch-zoom: ;
-            --tw-scroll-snap-strictness: proximity;
-            --tw-gradient-from-position: ;
-            --tw-gradient-via-position: ;
-            --tw-gradient-to-position: ;
-            --tw-ordinal: ;
-            --tw-slashed-zero: ;
-            --tw-numeric-figure: ;
-            --tw-numeric-spacing: ;
-            --tw-numeric-fraction: ;
-            --tw-ring-inset: ;
-            --tw-ring-offset-width: 0px;
-            --tw-ring-offset-color: #fff;
-            --tw-ring-color: rgb(59 130 246 / 0.5);
-            --tw-ring-offset-shadow: 0 0 #0000;
-            --tw-ring-shadow: 0 0 #0000;
-            --tw-shadow: 0 0 #0000;
-            --tw-shadow-colored: 0 0 #0000;
-            --tw-blur: ;
-            --tw-brightness: ;
-            --tw-contrast: ;
-            --tw-grayscale: ;
-            --tw-hue-rotate: ;
-            --tw-invert: ;
-            --tw-saturate: ;
-            --tw-sepia: ;
-            --tw-drop-shadow: ;
-            --tw-backdrop-blur: ;
-            --tw-backdrop-brightness: ;
-            --tw-backdrop-contrast: ;
-            --tw-backdrop-grayscale: ;
-            --tw-backdrop-hue-rotate: ;
-            --tw-backdrop-invert: ;
-            --tw-backdrop-opacity: ;
-            --tw-backdrop-saturate: ;
-            --tw-backdrop-sepia: ;
-            --tw-contain-size: ;
-            --tw-contain-layout: ;
-            --tw-contain-paint: ;
-            --tw-contain-style: ;
-        }
-
-        .fixed {
-            position: fixed;
-        }
-
-        .absolute {
-            position: absolute;
-        }
-
-        .relative {
-            position: relative;
-        }
-
-        .-left-20 {
-            left: -5rem;
-        }
-
-        .top-0 {
-            top: 0px;
-        }
-
-        .col-start-2 {
-            grid-column-start: 2;
-        }
-
-        .-mx-3 {
-            margin-left: -0.75rem;
-            margin-right: -0.75rem;
-        }
-
-        .mx-auto {
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .mt-6 {
-            margin-top: 1.5rem;
-        }
-
-        .inline {
-            display: inline;
-        }
-
-        .flex {
-            display: flex;
-        }
-
-        .grid {
-            display: grid;
-        }
-
-        .h-12 {
-            height: 3rem;
-        }
-
-        .h-16 {
-            height: 4rem;
-        }
-
-        .min-h-screen {
-            min-height: 100vh;
-        }
-
-        .w-3\/4 {
-            width: 75%;
-        }
-
-        .w-auto {
-            width: auto;
-        }
-
-        .w-full {
-            width: 100%;
-        }
-
-        .max-w-2xl {
-            max-width: 42rem;
-        }
-
-        .max-w-7xl {
-            max-width: 80rem;
-        }
-
-        .max-w-\[877px\] {
-            max-width: 877px;
-        }
-
-        .flex-1 {
-            flex: 1 1 0%;
-        }
-
-        @keyframes pulse {
-            50% {
-                opacity: .5;
-            }
-        }
-
-        .animate-pulse {
-            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-        }
-
-        .grid-cols-2 {
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-
-        .grid-cols-3 {
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-        }
-
-        .flex-col {
-            flex-direction: column;
-        }
-
-        .items-center {
-            align-items: center;
-        }
-
-        .justify-end {
-            justify-content: flex-end;
-        }
-
-        .justify-center {
-            justify-content: center;
-        }
-
-        .gap-2 {
-            gap: 0.5rem;
-        }
-
-        .rounded-md {
-            border-radius: 0.375rem;
-        }
-
-        .bg-\[\#FF2D20\] {
-            --tw-bg-opacity: 1;
-            background-color: rgb(255 45 32 / var(--tw-bg-opacity));
-        }
-
-        .bg-black {
-            --tw-bg-opacity: 1;
-            background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-        }
-
-        .bg-gray-50 {
-            --tw-bg-opacity: 1;
-            background-color: rgb(249 250 251 / var(--tw-bg-opacity));
-        }
-
-        .px-3 {
-            padding-left: 0.75rem;
-            padding-right: 0.75rem;
-        }
-
-        .px-6 {
-            padding-left: 1.5rem;
-            padding-right: 1.5rem;
-        }
-
-        .py-10 {
-            padding-top: 2.5rem;
-            padding-bottom: 2.5rem;
-        }
-
-        .py-16 {
-            padding-top: 4rem;
-            padding-bottom: 4rem;
-        }
-
-        .py-2 {
-            padding-top: 0.5rem;
-            padding-bottom: 0.5rem;
-        }
-
-        .text-center {
-            text-align: center;
-        }
-
-        .font-sans {
-            font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-        }
-
-        .text-sm {
-            font-size: 0.875rem;
-            line-height: 1.25rem;
-        }
-
-        .text-\[\#FF2D20\] {
-            --tw-text-opacity: 1;
-            color: rgb(255 45 32 / var(--tw-text-opacity));
-        }
-
-        .text-black {
-            --tw-text-opacity: 1;
-            color: rgb(0 0 0 / var(--tw-text-opacity));
-        }
-
-        .text-black\/50 {
-            color: rgb(0 0 0 / 0.5);
-        }
-
-        .text-black\/70 {
-            color: rgb(0 0 0 / 0.7);
-        }
-
-        .text-white {
-            --tw-text-opacity: 1;
-            color: rgb(255 255 255 / var(--tw-text-opacity));
-        }
-
-        .text-white\/50 {
-            color: rgb(255 255 255 / 0.5);
-        }
-
-        .text-white\/70 {
-            color: rgb(255 255 255 / 0.7);
-        }
-
-        .text-white\/80 {
-            color: rgb(255 255 255 / 0.8);
-        }
-
-        .antialiased {
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-
-        .outline-none {
-            outline: 2px solid transparent;
-            outline-offset: 2px;
-        }
-
-        .ring-1 {
-            --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-            --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-            box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
-        }
-
-        .ring-transparent {
-            --tw-ring-color: transparent;
-        }
-
-        .transition {
-            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
-            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
-            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-            transition-duration: 150ms;
-        }
-
-        .selection\:bg-\[\#FF2D20\] *::selection {
-            --tw-bg-opacity: 1;
-            background-color: rgb(255 45 32 / var(--tw-bg-opacity));
-        }
-
-        .selection\:text-white *::selection {
-            --tw-text-opacity: 1;
-            color: rgb(255 255 255 / var(--tw-text-opacity));
-        }
-
-        .selection\:bg-\[\#FF2D20\]::selection {
-            --tw-bg-opacity: 1;
-            background-color: rgb(255 45 32 / var(--tw-bg-opacity));
-        }
-
-        .selection\:text-white::selection {
-            --tw-text-opacity: 1;
-            color: rgb(255 255 255 / var(--tw-text-opacity));
-        }
-
-        .hover\:text-black\/70:hover {
-            color: rgb(0 0 0 / 0.7);
-        }
-
-        .focus\:outline-none:focus {
-            outline: 2px solid transparent;
-            outline-offset: 2px;
-        }
-
-        .focus-visible\:ring-\[\#FF2D20\]:focus-visible {
-            --tw-ring-opacity: 1;
-            --tw-ring-color: rgb(255 45 32 / var(--tw-ring-opacity));
-        }
-
-        .focus-visible\:ring-white:focus-visible {
-            --tw-ring-opacity: 1;
-            --tw-ring-color: rgb(255 255 255 / var(--tw-ring-opacity));
-        }
-
-        @media (min-width: 1024px) {
-            .lg\:col-start-2 {
-                grid-column-start: 2;
-            }
-
-            .lg\:h-16 {
-                height: 4rem;
-            }
-
-            .lg\:max-w-7xl {
-                max-width: 80rem;
-            }
-
-            .lg\:grid-cols-3 {
-                grid-template-columns: repeat(3, minmax(0, 1fr));
-            }
-
-            .lg\:justify-center {
-                justify-content: center;
-            }
-
-            .lg\:text-\[\#FF2D20\] {
-                --tw-text-opacity: 1;
-                color: rgb(255 45 32 / var(--tw-text-opacity));
-            }
-        }
-
-        @media (prefers-color-scheme: dark) {
-            .dark\:bg-black {
-                --tw-bg-opacity: 1;
-                background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-            }
-
-            .dark\:text-white {
-                --tw-text-opacity: 1;
-                color: rgb(255 255 255 / var(--tw-text-opacity));
-            }
-
-            .dark\:text-white\/50 {
-                color: rgb(255 255 255 / 0.5);
-            }
-
-            .dark\:text-white\/70 {
-                color: rgb(255 255 255 / 0.7);
-            }
-
-            .dark\:hover\:text-white\/80:hover {
-                color: rgb(255 255 255 / 0.8);
-            }
-
-            .dark\:focus-visible\:ring-white:focus-visible {
-                --tw-ring-opacity: 1;
-                --tw-ring-color: rgb(255 255 255 / var(--tw-ring-opacity));
-            }
-        }
-    </style>
+    <!-- Scripts -->
+    @vite('resources/css/app.css')
 </head>
 
 <body class="font-sans antialiased dark:bg-black dark:text-white/50">
     <div class="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50">
-        <img id="background" class="absolute -left-20 top-0 max-w-[877px]"
+        <img id="background" class="absolute -left-20 top-0 max-w-[877px] h-screen"
             src="https://laravel.com/assets/img/welcome/background.svg" />
         <div
             class="relative min-h-screen flex flex-col items-center justify-center selection:bg-[#FF2D20] selection:text-white">
@@ -915,7 +56,81 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
                 </header>
 
                 <main class="mt-6">
-                    <x-utn-logo class="w-3/4" />
+                    <div class="grid gap-6 lg:grid-cols-2 lg:gap-8">
+                        <a href="https://laravel.com/docs" id="docs-card"
+                            class="flex flex-col items-start gap-6 overflow-hidden rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none focus-visible:ring-[#FF2D20] md:row-span-3 lg:p-10 lg:pb-10 dark:bg-zinc-900 dark:ring-zinc-800 dark:hover:text-white/70 dark:hover:ring-zinc-700 dark:focus-visible:ring-[#FF2D20]">
+                            <div id="screenshot-container" class="relative flex items-stretch flex-1 w-full">
+                                <x-utn-logo class="w-full h-full " />
+                            </div>
+
+                            <div class="relative flex items-center gap-6 lg:items-end">
+                                <div id="docs-card-content" class="flex items-start gap-6 lg:flex-col">
+                                    <div
+                                        class="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#FF2D20]/10 sm:size-16">
+                                        <svg class="size-5 sm:size-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                            viewBox="0 0 24 24">
+                                            <path fill="#FF2D20"
+                                                d="M23 4a1 1 0 0 0-1.447-.894L12.224 7.77a.5.5 0 0 1-.448 0L2.447 3.106A1 1 0 0 0 1 4v13.382a1.99 1.99 0 0 0 1.105 1.79l9.448 4.728c.14.065.293.1.447.1.154-.005.306-.04.447-.105l9.453-4.724a1.99 1.99 0 0 0 1.1-1.789V4ZM3 6.023a.25.25 0 0 1 .362-.223l7.5 3.75a.251.251 0 0 1 .138.223v11.2a.25.25 0 0 1-.362.224l-7.5-3.75a.25.25 0 0 1-.138-.22V6.023Zm18 11.2a.25.25 0 0 1-.138.224l-7.5 3.75a.249.249 0 0 1-.329-.099.249.249 0 0 1-.033-.12V9.772a.251.251 0 0 1 .138-.224l7.5-3.75a.25.25 0 0 1 .362.224v11.2Z" />
+                                            <path fill="#FF2D20"
+                                                d="m3.55 1.893 8 4.048a1.008 1.008 0 0 0 .9 0l8-4.048a1 1 0 0 0-.9-1.785l-7.322 3.706a.506.506 0 0 1-.452 0L4.454.108a1 1 0 0 0-.9 1.785H3.55Z" />
+                                        </svg>
+                                    </div>
+
+                                    <div class="pt-3 sm:pt-5 lg:pt-0">
+                                        <h2 class="text-xl font-semibold text-black dark:text-white">Sistema de becas
+                                            UTN</h2>
+
+                                        <p class="mt-4 text-sm/relaxed">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis,
+                                            reprehenderit ratione! Porro facilis sit aspernatur ullam qui odit in, eius
+                                            saepe rem illo consequuntur hic minima ea suscipit libero obcaecati.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <svg class="size-6 shrink-0 stroke-[#FF2D20]" xmlns="http://www.w3.org/2000/svg"
+                                    fill="none" viewBox="0 0 24 24" stroke-width="1.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+                                </svg>
+                            </div>
+                        </a>
+
+                        <a href="/requirements"
+                            class="flex items-start gap-4 rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none focus-visible:ring-[#FF2D20] lg:pb-10 dark:bg-zinc-900 dark:ring-zinc-800 dark:hover:text-white/70 dark:hover:ring-zinc-700 dark:focus-visible:ring-[#FF2D20]">
+                            <div
+                                class="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#FF2D20]/10 sm:size-16">
+                                <svg class="size-5 sm:size-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24">
+                                    <g fill="#FF2D20">
+                                        <path
+                                            d="M8.75 4.5H5.5c-.69 0-1.25.56-1.25 1.25v4.75c0 .69.56 1.25 1.25 1.25h3.25c.69 0 1.25-.56 1.25-1.25V5.75c0-.69-.56-1.25-1.25-1.25Z" />
+                                        <path
+                                            d="M24 10a3 3 0 0 0-3-3h-2V2.5a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2V20a3.5 3.5 0 0 0 3.5 3.5h17A3.5 3.5 0 0 0 24 20V10ZM3.5 21.5A1.5 1.5 0 0 1 2 20V3a.5.5 0 0 1 .5-.5h14a.5.5 0 0 1 .5.5v17c0 .295.037.588.11.874a.5.5 0 0 1-.484.625L3.5 21.5ZM22 20a1.5 1.5 0 1 1-3 0V9.5a.5.5 0 0 1 .5-.5H21a1 1 0 0 1 1 1v10Z" />
+                                        <path
+                                            d="M12.751 6.047h2a.75.75 0 0 1 .75.75v.5a.75.75 0 0 1-.75.75h-2A.75.75 0 0 1 12 7.3v-.5a.75.75 0 0 1 .751-.753ZM12.751 10.047h2a.75.75 0 0 1 .75.75v.5a.75.75 0 0 1-.75.75h-2A.75.75 0 0 1 12 11.3v-.5a.75.75 0 0 1 .751-.753ZM4.751 14.047h10a.75.75 0 0 1 .75.75v.5a.75.75 0 0 1-.75.75h-10A.75.75 0 0 1 4 15.3v-.5a.75.75 0 0 1 .751-.753ZM4.75 18.047h7.5a.75.75 0 0 1 .75.75v.5a.75.75 0 0 1-.75.75h-7.5A.75.75 0 0 1 4 19.3v-.5a.75.75 0 0 1 .75-.753Z" />
+                                    </g>
+                                </svg>
+                            </div>
+
+                            <div class="pt-3 sm:pt-5">
+                                <h2 class="text-xl font-semibold text-black dark:text-white">Requisitos</h2>
+
+                                <p class="mt-4 text-sm/relaxed">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis enim minus quam
+                                    illo blanditiis culpa iusto, iure assumenda officiis suscipit vel minima porro
+                                    exercitationem nobis praesentium quod ut, consequatur commodi.
+                                </p>
+                            </div>
+
+                            <svg class="size-6 shrink-0 self-center stroke-[#FF2D20]" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 24 24" stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+                            </svg>
+                        </a>
+
+                    </div>
                 </main>
 
                 <footer class="py-16 text-sm text-center text-black dark:text-white/70">

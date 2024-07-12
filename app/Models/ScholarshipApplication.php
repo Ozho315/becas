@@ -24,6 +24,16 @@ class ScholarshipApplication extends Model
     ];
 
     /**
+     * Get the scholarshipType that owns the ScholarshipApplication
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function scholarshipType(): BelongsTo
+    {
+        return $this->belongsTo(ScholarshipType::class);
+    }
+
+    /**
      * Get the committee that owns the ScholarshipApplication
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo

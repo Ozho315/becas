@@ -41,4 +41,14 @@ class ScholarshipType extends Model
     {
         return $this->belongsTo(Committee::class);
     }
+
+    /**
+     * Get all of the scholarshipApplications for the ScholarshipType
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function scholarshipApplications(): HasMany
+    {
+        return $this->hasMany(ScholarshipApplication::class);
+    }
 }

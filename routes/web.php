@@ -12,6 +12,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/requirements', function () {
+    return view('requirements');
+});
+
+Route::get('/team', function () {
+    return view('team');
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

@@ -3,15 +3,20 @@
 namespace App\Exports;
 
 use App\Models\ScholarshipApplication;
-use Maatwebsite\Excel\Concerns\FromCollection;
+use Illuminate\Contracts\View\View;
+use Maatwebsite\Excel\Concerns\FromView;
+use Maatwebsite\Excel\Concerns\ShouldAutoSize;
 
-class ScholarshipApplicationsExport implements FromCollection
+class ScholarshipApplicationsExport implements FromView, ShouldAutoSize
 {
-    /**
-    * @return \Illuminate\Support\Collection
-    */
-    public function collection()
+    public function __construct(private int $year)
     {
-        return ScholarshipApplication::all();
+    }
+    public function view(): View
+    {
+        $data = ScholarshipApplication::whereYear('created_at', '=', $this->year)->get();
+        return view('exports.scholarship-applications', [
+            'applications' => $data,
+        ]);
     }
 }

@@ -4,13 +4,14 @@ namespace App\Livewire\Admin\ScholarshipApplication;
 
 use App\Exports\ScholarshipApplicationsExport;
 use App\Models\ScholarshipApplication;
+use Illuminate\Support\Carbon;
 use LivewireUI\Modal\ModalComponent;
 use Maatwebsite\Excel\Facades\Excel;
 
 class ReportModal extends ModalComponent
 {
     public array $years = [];
-    public $selectedYear;
+    public int $selectedYear = 2024;
 
     public function mount()
     {
@@ -33,10 +34,6 @@ class ReportModal extends ModalComponent
 
     public function generateReport()
     {
-        \Log::debug(print_r(gettype($this->selectedYear), true));
-        \Log::debug("Generating report for the {$this->selectedYear}");
-
-        return Excel::download(new ScholarshipApplicationsExport, 'test.xlsx');
-
+        return Excel::download(new ScholarshipApplicationsExport($this->selectedYear), 'test.xlsx');
     }
 }

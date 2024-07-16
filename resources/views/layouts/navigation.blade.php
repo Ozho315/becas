@@ -25,6 +25,9 @@
                         <x-nav-link :href="route('professors.index')" :active="request()->routeIs('professors.*')">
                             {{ __('Professors') }}
                         </x-nav-link>
+                        <x-nav-link :href="route('scholarship-applications.index')" :active="request()->routeIs('scholarship-applications.*')">
+                            {{ __('Scholarship applications') }}
+                        </x-nav-link>
                     @endrole
 
                     @role('professor')

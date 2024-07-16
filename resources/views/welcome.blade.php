@@ -57,7 +57,7 @@
 
                 <main class="mt-6">
                     <div class="grid gap-6 lg:grid-cols-2 lg:gap-8">
-                        <a href="/team" id="docs-card"
+                        <a href="" id="docs-card"
                             class="flex flex-col items-start gap-6 overflow-hidden rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none focus-visible:ring-[#FF2D20] md:row-span-3 lg:p-10 lg:pb-10 dark:bg-zinc-900 dark:ring-zinc-800 dark:hover:text-white/70 dark:hover:ring-zinc-700 dark:focus-visible:ring-[#FF2D20]">
                             <div id="screenshot-container" class="relative flex items-stretch flex-1 w-full">
                                 <x-utn-logo class="w-full h-full " />
@@ -79,13 +79,15 @@
                                     </div>
 
                                     <div class="pt-3 sm:pt-5 lg:pt-0">
-                                        <h2 class="text-xl font-semibold text-black dark:text-white">Sistema de becas
+                                        <h2 class="text-xl font-semibold text-black dark:text-white">Grupo 8 - Sistema Gestión de Becas UTN (FICA)
                                             UTN</h2>
 
                                         <p class="mt-4 text-sm/relaxed">
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis,
-                                            reprehenderit ratione! Porro facilis sit aspernatur ullam qui odit in, eius
-                                            saepe rem illo consequuntur hic minima ea suscipit libero obcaecati.
+                                            La gestión de becas en la Facultad de FICA de la Universidad Técnica del Norte utiliza bases de datos y lenguajes de programación avanzados.
+                                            Este sistema utiliza tecnologías como Java y Python para el desarrollo de aplicaciones y utiliza SQL y SQLite para administrar bases de datos.
+                                            A través de un sistema automatizado que almacena y procesa datos de manera eficiente, los estudiantes pueden aplicar y ver el estado de sus solicitudes de becas.
+                                            La combinación de estos lenguajes de programación y sistemas de bases de datos garantiza una administración de datos sólida y fácil de usar, mejorando la experiencia del usuario y la eficiencia operativa.
+                                            Este método tecnológico no solo facilita la gestión interna de las becas, sino que también brinda a los estudiantes una plataforma confiable y actualizada para sus necesidades académicas, asegurando que la información esté siempre disponible y actualizada.
                                         </p>
                                     </div>
                                 </div>
@@ -119,9 +121,16 @@
                                 <h2 class="text-xl font-semibold text-black dark:text-white">Requisitos</h2>
 
                                 <p class="mt-4 text-sm/relaxed">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis enim minus quam
-                                    illo blanditiis culpa iusto, iure assumenda officiis suscipit vel minima porro
-                                    exercitationem nobis praesentium quod ut, consequatur commodi.
+                                    Artículo 1.- El presente reglamento tiene como objeto normar el otorgamiento de becas a
+                                    favor de los estudiantes de las carreras de grado de la Universidad Técnica del Norte.
+                                    En la aplicación del presente reglamento se respetarán los derechos constitucionales de
+                                    acuerdo con la normativa vigente, garantizando en toda instancia del proceso, la igualdad de
+                                    oportunidades en el acceso, permanencia y equidad de género.
+                                    <br>
+                                    <br>
+                                    Artículo 2.- Las disposiciones de este reglamento son de aplicación obligatoria para la
+                                    concesión de becas en beneficio de los estudiantes regulares de grado en las modalidades:
+                                    presencial, semipresencial y en línea de la Universidad Técnica del Norte.
                                 </p>
                             </div>
 
